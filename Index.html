@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tepari To-Be Swimlane – Horizontal</title>
+<style>
+  body { margin: 0; padding: 20px; font-family: sans-serif; background: #fff; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a18; }
+  }
+</style>
+</head>
+<body>
+<svg width="100%" viewBox="0 0 1400 580" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<!-- Lane backgrounds -->
+<rect x="0" y="0"   width="1400" height="86"  fill="#F1EFE8"/>
+<rect x="0" y="86"  width="1400" height="80"  fill="#E8E6DF"/>
+<rect x="0" y="166" width="1400" height="140" fill="#E1F5EE"/>
+<rect x="0" y="306" width="1400" height="180" fill="#EEEDFE"/>
+<rect x="0" y="486" width="1400" height="94"  fill="#E6F1FB"/>
+
+<!-- Lane dividers -->
+<line x1="0" y1="86"  x2="1400" y2="86"  stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="0" y1="166" x2="1400" y2="166" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="0" y1="306" x2="1400" y2="306" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="0" y1="486" x2="1400" y2="486" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="100" y1="0" x2="100" y2="580" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<!-- Lane labels -->
+<text x="50" y="47"  text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#444441">Customer</text>
+<text x="50" y="126" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#444441">System</text>
+<text x="50" y="236" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#085041">Main Agent</text>
+<text x="50" y="396" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#3C3489">Sales Support</text>
+<text x="50" y="533" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#0C447C">Sales</text>
+
+<!-- NEW ROLE badge -->
+<rect x="104" y="170" width="66" height="18" rx="9" fill="#1D9E75"/>
+<text x="137" y="182" text-anchor="middle" style="font-size:9px;fill:#fff;font-weight:500">New role</text>
+
+<!-- LANE 1: Customer -->
+<rect x="180" y="18" width="200" height="50" rx="8" fill="#D3D1C7" stroke="#888780" stroke-width="0.5"/>
+<text x="280" y="38" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#2C2C2A">Fills in Portal Form</text>
+<text x="280" y="56" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#5F5E5A">Name · Phone · Email · Product · Message</text>
+
+<line x1="280" y1="68" x2="280" y2="94" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- LANE 2: System -->
+<rect x="180" y="96" width="200" height="44" rx="8" fill="#D3D1C7" stroke="#888780" stroke-width="0.5"/>
+<text x="280" y="114" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#2C2C2A">Zapier → Contact Center</text>
+<text x="280" y="130" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#5F5E5A">Microsoft Contact Center Inbox</text>
+
+<line x1="280" y1="140" x2="280" y2="174" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- LANE 3: Main Agent -->
+<rect x="180" y="176" width="150" height="44" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="255" y="194" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#085041">Receives email</text>
+<text x="255" y="210" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0F6E56">Contact Center inbox</text>
+<line x1="330" y1="198" x2="360" y2="198" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="360" y="176" width="140" height="44" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="430" y="194" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#085041">Search CRM</text>
+<text x="430" y="210" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0F6E56">email + phone</text>
+<line x1="500" y1="198" x2="524" y2="198" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Decision: Account? -->
+<polygon points="564,176 614,198 564,220 514,198" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="564" y="198" text-anchor="middle" dominant-baseline="central" style="font-size:10px;font-weight:500;fill:#085041">Account?</text>
+
+<line x1="564" y1="220" x2="564" y2="260" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="574" y="242" style="font-size:10px;fill:#993C1D">No</text>
+<rect x="504" y="260" width="120" height="38" rx="8" fill="#F5C4B3" stroke="#993C1D" stroke-width="0.5"/>
+<text x="564" y="275" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#4A1B0C">Create Account</text>
+<text x="564" y="291" text-anchor="middle" dominant-baseline="central" style="font-size:9px;fill:#712B13">Farm/Property name</text>
+
+<line x1="614" y1="198" x2="680" y2="198" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="648" y="190" style="font-size:10px;fill:#5F5E5A">Yes</text>
+
+<line x1="624" y1="279" x2="700" y2="279" stroke="#888780" stroke-width="1.5"/>
+<line x1="700" y1="279" x2="700" y2="198" stroke="#888780" stroke-width="1.5"/>
+
+<!-- Decision: Contact? -->
+<polygon points="730,176 780,198 730,220 680,198" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="730" y="198" text-anchor="middle" dominant-baseline="central" style="font-size:10px;font-weight:500;fill:#085041">Contact?</text>
+
+<line x1="730" y1="220" x2="730" y2="260" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="740" y="242" style="font-size:10px;fill:#993C1D">No</text>
+<rect x="670" y="260" width="120" height="38" rx="8" fill="#F5C4B3" stroke="#993C1D" stroke-width="0.5"/>
+<text x="730" y="275" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#4A1B0C">Create Contact</text>
+<text x="730" y="291" text-anchor="middle" dominant-baseline="central" style="font-size:9px;fill:#712B13">Link to Account</text>
+
+<line x1="780" y1="198" x2="840" y2="198" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="812" y="190" style="font-size:10px;fill:#5F5E5A">Yes</text>
+
+<line x1="790" y1="279" x2="860" y2="279" stroke="#888780" stroke-width="1.5"/>
+<line x1="860" y1="279" x2="860" y2="198" stroke="#888780" stroke-width="1.5"/>
+
+<!-- Create Activity -->
+<rect x="840" y="176" width="150" height="44" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="915" y="194" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#085041">Create Activity</text>
+<text x="915" y="210" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0F6E56">Product·Message·Date·Source</text>
+
+<line x1="915" y1="220" x2="915" y2="314" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- LANE 4: Sales Support -->
+<rect x="840" y="316" width="150" height="44" rx="8" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+<text x="915" y="334" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#26215C">Receives handoff</text>
+<text x="915" y="350" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#3C3489">Acct+Contact+Activity</text>
+<line x1="990" y1="338" x2="1020" y2="338" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="1020" y="316" width="140" height="44" rx="8" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+<text x="1090" y="334" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#26215C">Assess intent</text>
+<text x="1090" y="350" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#3C3489">Hot / Warm / Cold</text>
+<line x1="1160" y1="338" x2="1190" y2="338" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="1190" y="316" width="120" height="44" rx="8" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
+<text x="1250" y="334" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#26215C">Create Lead</text>
+<text x="1250" y="350" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#3C3489">in CRM</text>
+<line x1="1310" y1="338" x2="1334" y2="338" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Decision: High value? -->
+<polygon points="1374,316 1394,338 1374,360 1354,338" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="1374" y="338" text-anchor="middle" dominant-baseline="central" style="font-size:9px;font-weight:500;fill:#3C3489">High?</text>
+
+<!-- No: low value -->
+<line x1="1374" y1="360" x2="1374" y2="410" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1384" y="388" style="font-size:10px;fill:#993C1D">No</text>
+<rect x="1294" y="412" width="160" height="44" rx="8" fill="#F5C4B3" stroke="#993C1D" stroke-width="0.5"/>
+<text x="1374" y="430" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#4A1B0C">Full sales process</text>
+<text x="1374" y="447" text-anchor="middle" dominant-baseline="central" style="font-size:9px;fill:#712B13">Lead→Opp→Quote→Order→Invoice</text>
+
+<!-- Yes: high value route up then left -->
+<path d="M1374 316 L1374 296 L1250 296 L1250 390" fill="none" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1314" y="289" style="font-size:10px;fill:#0F6E56">Yes</text>
+
+<rect x="1190" y="390" width="120" height="38" rx="8" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="1250" y="405" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#085041">Assign Lead</text>
+<text x="1250" y="421" text-anchor="middle" dominant-baseline="central" style="font-size:9px;fill:#0F6E56">by region (UK/AU/NZ/US)</text>
+
+<line x1="1190" y1="409" x2="1162" y2="409" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="1040" y="390" width="120" height="38" rx="8" fill="#FAC775" stroke="#BA7517" stroke-width="0.5"/>
+<text x="1100" y="405" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#412402">24hr follow-up</text>
+<text x="1100" y="421" text-anchor="middle" dominant-baseline="central" style="font-size:9px;fill:#633806">Monitor response</text>
+
+<line x1="1100" y1="428" x2="1100" y2="494" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- LANE 5: Sales -->
+<rect x="1020" y="496" width="140" height="44" rx="8" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+<text x="1090" y="514" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#042C53">Receives Lead</text>
+<text x="1090" y="530" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0C447C">full context in CRM</text>
+<line x1="1160" y1="518" x2="1190" y2="518" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="1190" y="496" width="190" height="44" rx="8" fill="#B5D4F4" stroke="#185FA5" stroke-width="0.5"/>
+<text x="1285" y="514" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#042C53">Customer engagement</text>
+<text x="1285" y="530" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0C447C">Opp → Quote → Order → Invoice</text>
+
+<!-- Bottom tagline -->
+<text x="700" y="568" text-anchor="middle" style="font-size:11px;fill:#888780">One entry point · Three clear layers · Zero dirty data</text>
+</svg>
+</body>
+</html>
